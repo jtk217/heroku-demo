@@ -31,7 +31,11 @@ app.get('/api/send', function (req, res){
     // do something here
 });
 
+
 //start the web server
+var port = process.env.YOUR_PORT || process.env.PORT || 8080;
+var host = process.env.YOUR_HOST || '0.0.0.0';
+
 var server = app.listen('8080', function() {
     console.log('listening for requests sent to http://localhost:%s', server.address().port);
 });
